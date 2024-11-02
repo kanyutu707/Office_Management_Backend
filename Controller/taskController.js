@@ -2,12 +2,12 @@ const pool=require("../config/db")
 
 exports.createTask = async (req, res) => {
     try {
-        const { description, title, created, assigned_to, deadline, company_id } = req.body;
+        const { description, title, created, assigned_to, deadline, createdby, company_id } = req.body;
         const connection = await pool.getConnection();
         try {
-            await connection.query("INSERT INTO tasks (description, title, created, assigned_to, deadline, company_id) VALUES (?, ?, ?, ?, ?, ?)", [description, title, created, assigned_to, deadline, company_id]);
+            await connection.query("INSERT INTO tasks (description, title, created, assigned_to, deadline, createdby, company_id) VALUES (?, ?, ?, ?, ?, ?,?)", [description, title, created, assigned_to, deadline, createdby, company_id]);
             connection.release();
-            res.status(201).json({ description, title, created, assigned_to, deadline, company_id });
+            res.status(201).json({ description, title, created, assigned_to, deadline, createdby, company_id });
         } catch (error) {
             connection.release();
             throw error;
@@ -56,13 +56,13 @@ exports.getTaskById=async(req, res)=>{
 exports.updateTask=async(req, res)=>{
     try{
         const{id}=req.params;
-        const {description, title, created, assigned_to}=req.body;
+        const {description, title, created, createdby, assigned_to}=req.body;
 
         const connection=await pool.getConnection();
         try{
-            await connection.query("UPDATE tasks SET description=?, title=?, created=?, assigned_to=?", [description, title, created, assigned_to, id]);
+            await connection.query("UPDATE tasks SET description=?, title=?, created=?, createdby, assigned_to=?", [description, title, created, createdby, assigned_to, id]);
             connection.release();
-            res.json({id, description, title, created, assigned_to})
+            res.json({id, description, title, created,createdby, assigned_to})
         }
         catch(error){
             connection.release();

@@ -42,6 +42,7 @@ CREATE TABLE tasks(
     assigned_to INT DEFAULT NULL,
     deadline DATETIME NOT NULL,
     company_id INT NOT NULL,
+    createdby INT NOT NULL,
     PRIMARY KEY(id),
     FOREIGN KEY(assigned_to) REFERENCES users(id),
     FOREIGN KEY(company_id) REFERENCES company(id)
@@ -53,6 +54,7 @@ CREATE TABLE financials(
     source VARCHAR(255) DEFAULT NULL,
     type BIT(1) NOT NULL,
     company_id INT NOT NULL,
+    amount INT NOT NULL,
     PRIMARY KEY(id),
     FOREIGN KEY(company_id) REFERENCES company(id)
 );

@@ -2,12 +2,12 @@ const pool=require('../config/db');
 
 exports.createFinances=async(req, res)=>{
     try{
-        const {description, source, type, company_id}=req.body;
+        const {description, source, type, amount, company_id}=req.body;
         const connection=await pool.getConnection();
         try{
-            await connection.query("INSERT INTO financials (description, source, type, company_id) VALUES (?, ?, ?, ?)", [description, source, type, company_id]);
+            await connection.query("INSERT INTO financials (description, source, type, amount, company_id) VALUES (?, ?, ?, ?,?)", [description, source, type,amount, company_id]);
             connection.release();
-            res.status(201).json({description, source, type, company_id});
+            res.status(201).json({description, source, type, amount, company_id});
 
         }catch(error){
             connection.release();
@@ -59,13 +59,13 @@ exports.getFinancesById = async (req, res) => {
   exports.updateFinances = async (req, res) => {
     try {
       const { id } = req.params;
-      const {description, source, type, company_id}= req.body;
+      const {description, source, type, amount,company_id}= req.body;
   
       const connection = await pool.getConnection();
       try {
-        await connection.query('UPDATE financials SET description = ?, source = ?, type=?, company_id=? WHERE id = ?', [description, source, type, company_id, id]);
+        await connection.query('UPDATE financials SET description = ?, source = ?, type=?, amount=?, company_id=? WHERE id = ?', [description, source, type, amount, company_id, id]);
         connection.release();
-        res.json({id, description, source, type, company_id});
+        res.json({id, description, source, type, amount, company_id});
       } catch (error) {
         connection.release();
         throw error;

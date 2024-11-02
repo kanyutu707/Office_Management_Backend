@@ -27,6 +27,7 @@ exports.getAllCompanies=async(req, res)=>{
             const[companies]=await connection.query("SELECT * FROM company");
             connection.release();
             res.json(companies);
+            
         }
         catch(error){
             connection.release()
