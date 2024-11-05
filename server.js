@@ -6,6 +6,7 @@ const userRoutes = require('./Routes/userRoutes');
 const companyRoutes = require('./Routes/companyRoutes');
 const taskRoutes = require('./Routes/taskRouter');
 const financeRoutes=require('./Routes/financialRouter')
+const leaveRoutes=require('./Routes/leaveRoutes');
 const cors = require('cors');
 const jwt = require('jsonwebtoken');
 
@@ -54,6 +55,7 @@ app.use('/user', userRoutes);
 app.use('/company', companyRoutes);
 app.use('/task', taskRoutes);
 app.use('/finance', financeRoutes);
+app.use('/leaves', leaveRoutes);
 
 const PORT = process.env.PORT || 3000;
 
