@@ -59,16 +59,12 @@ CREATE TABLE financials(
     FOREIGN KEY(company_id) REFERENCES company(id)
 );
 
-CREATE TABLE Messages(
-    id INT NOT NULL AUTO_INCREMENT,
-    message_from INT NOT NULL,
-    message_to INT NOT NULL,
-    message VARCHAR(255) NOT NULL,
-    company_id INT NOT NULL,
-    PRIMARY KEY(id),
-    FOREIGN KEY(message_from) REFERENCES users(id),
-    FOREIGN KEY(message_to) REFERENCES users(id),
-    FOREIGN KEY(company_id) REFERENCES company(id)
+CREATE TABLE messages (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  message TEXT NOT NULL,
+  sender_id VARCHAR(255) NOT NULL,
+  recipient_id VARCHAR(255) NOT NULL,
+  __createdtime__ BIGINT NOT NULL
 );
 CREATE TABLE Leaves(
     id INT NOT NULL AUTO_INCREMENT,
