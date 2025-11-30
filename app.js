@@ -19,7 +19,7 @@ const server = http.createServer(app);
 
 // CORS configuration
 const corsOptions = {
-  origin: "https://officesys.vercel.app/",
+  origin: "https://officesys.vercel.app",
   methods: ["GET", "POST", "PUT", "PATCH", "DELETE"],
   credentials: true
 };
