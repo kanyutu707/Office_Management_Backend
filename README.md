@@ -3,7 +3,7 @@
 
 The Office Management System is a centralized full-stack ecosystem designed to streamline corporate workflows, HR administrative processing, and workplace communication.
 
-This document outlines the backend codebase, operational logic, database schemas, and real-time event systems. The complete React user interface is maintained as a decoupled application and can be accessed at the **Office Frontend Repository** ([https://github.com/kanyutu707/Office_Frontend](https://www.google.com/url?sa=E&source=gmail&q=https://github.com/kanyutu707/Office_Frontend)).
+This document outlines the backend codebase, operational logic, database schemas, and real-time event systems. The complete React user interface is maintained as a decoupled application and can be accessed at the **Office Frontend Repository** ([https://github.com/kanyutu707/OfficeManagementFrontend](https://www.google.com/url?sa=E&source=gmail&q=https://github.com/kanyutu707/OfficeManagementFrontend)).
 
 ---
 
