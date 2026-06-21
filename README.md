@@ -3,7 +3,7 @@
 
 The Office Management System is a centralized full-stack ecosystem designed to streamline corporate workflows, HR administrative processing, and workplace communication.
 
-This document outlines the backend codebase, operational logic, database schemas, and real-time event systems. The complete React user interface is maintained as a decoupled application and can be accessed at the **Office Frontend Repository** ([https://github.com/alfred1001/OfficeManagementFrontend](https://www.google.com/url?sa=E&source=gmail&q=https://github.com/alfred1001/OfficeManagementFrontend)).
+This document outlines the backend codebase, operational logic, database schemas, and real-time event systems. The complete React user interface is maintained as a decoupled application and can be accessed at the **Office Frontend Repository** ([https://github.com/kanyutu707/OfficeManagementFrontend](https://www.google.com/url?sa=E&source=gmail&q=https://github.com/kanyutu707/OfficeManagementFrontend)).
 
 ---
 
@@ -51,7 +51,7 @@ The ecosystem relies on a strict **Separation of Concerns (SoC)**, dividing resp
 |                                                             |
 |   [FRONTEND CLIENT REPOSITORY]                              |
 |   React SPA User Interface                                  |
-|   URL: https://github.com/alfred1001/Office_Frontend         |
+|   URL: https://github.com/kanyutu707/Office_Frontend         |
 |                                                             |
 +------------------------------+------------------------------+
                                |
@@ -166,7 +166,7 @@ Verify that the host server environment has the following software installed:
 
 #### 9.2 Backend Installation Steps
 
-1. Clone this backend repository locally: `git clone https://github.com/alfred1001/Office_Management_Backend.git`
+1. Clone this backend repository locally: `git clone https://github.com/kanyutu707/Office_Management_Backend.git`
 2. Navigate into the backend root folder: `cd Office_Management_Backend`
 3. Acquire all structural software drivers: `npm install`
 4. Set up your database schema configurations inside your local MySQL instance.
@@ -174,7 +174,7 @@ Verify that the host server environment has the following software installed:
 
 #### 9.3 Frontend Connection
 
-To attach the interactive interface to this backend service, follow the installation instructions documented at the **Office Frontend Repository** ([https://github.com/alfred1001/Office_Frontend](https://www.google.com/url?sa=E&source=gmail&q=https://github.com/alfred1001/Office_Frontend)) and point the environment configurations to this running server.
+To attach the interactive interface to this backend service, follow the installation instructions documented at the **Office Frontend Repository** ([https://github.com/kanyutu707/Office_Frontend](https://www.google.com/url?sa=E&source=gmail&q=https://github.com/kanyutu707/Office_Frontend)) and point the environment configurations to this running server.
 
 ---
 
